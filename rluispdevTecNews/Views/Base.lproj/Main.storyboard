@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vf4-XA-OlA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--rluispdevNews-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsListViewController" customModule="rluispdevTecNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QcG-th-wPA">
+                                <rect key="frame" x="0.0" y="214" width="393" height="570"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.1450980392" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <constraints>
+                            <constraint firstItem="QcG-th-wPA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nfo-jq-gZ3"/>
+                            <constraint firstItem="QcG-th-wPA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QcG-EV-7h1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QcG-th-wPA" secondAttribute="trailing" id="W1t-ex-uma"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QcG-th-wPA" secondAttribute="bottom" id="g6D-ni-2Jw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="rluispdevNews" id="XkY-cK-xfq"/>
+                    <connections>
+                        <outlet property="newsListTableView" destination="QcG-th-wPA" id="O1k-JS-1kL"/>
+                        <segue destination="rAJ-XU-ZLI" kind="show" identifier="ShowNewsViewController" id="V9I-84-FCS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-142"/>
+        </scene>
+        <!--Titulo-->
+        <scene sceneID="vPG-OB-qFP">
+            <objects>
+                <viewController id="rAJ-XU-ZLI" customClass="NewsViewController" customModule="rluispdevTecNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3T-wH-ErD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSE-eb-tdb">
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-zd-IkR">
+                                <rect key="frame" x="-5.6666666666666572" y="-6" width="404.33333333333326" height="864"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-RR-zO3">
+                                        <rect key="frame" x="183.66666666666666" y="413.66666666666669" width="37" height="37"/>
+                                        <color key="color" red="0.1843137255" green="0.1450980392" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24214506150000001" green="0.21590080859999999" blue="0.51164168119999998" alpha="0.30113962155963303" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PF7-RR-zO3" firstAttribute="centerY" secondItem="TbE-zd-IkR" secondAttribute="centerY" id="Da3-Bv-4Nu"/>
+                                    <constraint firstItem="PF7-RR-zO3" firstAttribute="centerX" secondItem="TbE-zd-IkR" secondAttribute="centerX" id="cHq-9e-a1Q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dSa-4N-Mnc"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.1450980392" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dSa-4N-Mnc" firstAttribute="bottom" secondItem="BSE-eb-tdb" secondAttribute="bottom" id="5vl-lv-6dH"/>
+                            <constraint firstItem="BSE-eb-tdb" firstAttribute="leading" secondItem="dSa-4N-Mnc" secondAttribute="leading" id="D0M-1W-bxw"/>
+                            <constraint firstItem="TbE-zd-IkR" firstAttribute="centerX" secondItem="d3T-wH-ErD" secondAttribute="centerX" id="E2h-Uy-ULa"/>
+                            <constraint firstItem="BSE-eb-tdb" firstAttribute="top" secondItem="dSa-4N-Mnc" secondAttribute="top" id="SBN-se-8em"/>
+                            <constraint firstItem="TbE-zd-IkR" firstAttribute="centerY" secondItem="d3T-wH-ErD" secondAttribute="centerY" id="Ylz-7l-Mj5"/>
+                            <constraint firstItem="TbE-zd-IkR" firstAttribute="height" secondItem="d3T-wH-ErD" secondAttribute="height" multiplier="1.01408" id="ZjR-ny-pIs"/>
+                            <constraint firstItem="TbE-zd-IkR" firstAttribute="width" secondItem="d3T-wH-ErD" secondAttribute="width" multiplier="1.02799" id="h52-aR-5Ed"/>
+                            <constraint firstItem="dSa-4N-Mnc" firstAttribute="trailing" secondItem="BSE-eb-tdb" secondAttribute="trailing" id="nAg-HM-mPn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Titulo" largeTitleDisplayMode="never" id="1bC-p0-Kk2"/>
+                    <connections>
+                        <outlet property="loadingActivityIndicator" destination="PF7-RR-zO3" id="Ejv-Qy-J53"/>
+                        <outlet property="loadingView" destination="TbE-zd-IkR" id="6p2-vh-QKb"/>
+                        <outlet property="newsWebView" destination="BSE-eb-tdb" id="FmD-pu-5It"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWS-ca-PgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414.50381679389312" y="-138.02816901408451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kmB-Zn-qhr">
+            <objects>
+                <navigationController id="Vf4-XA-OlA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tSA-IG-9cf">
+                        <rect key="frame" x="0.0" y="118" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.14509803921568626" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.18431372549019609" green="0.14509803921568626" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T4L-HV-ozB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHT-AW-H3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1160" y="-142"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
