@@ -57,40 +57,17 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-zd-IkR">
-                                <rect key="frame" x="-5.6666666666666572" y="-6" width="404.33333333333326" height="864"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-RR-zO3">
-                                        <rect key="frame" x="183.66666666666666" y="413.66666666666669" width="37" height="37"/>
-                                        <color key="color" red="0.1843137255" green="0.1450980392" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.24214506150000001" green="0.21590080859999999" blue="0.51164168119999998" alpha="0.30113962155963303" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="PF7-RR-zO3" firstAttribute="centerY" secondItem="TbE-zd-IkR" secondAttribute="centerY" id="Da3-Bv-4Nu"/>
-                                    <constraint firstItem="PF7-RR-zO3" firstAttribute="centerX" secondItem="TbE-zd-IkR" secondAttribute="centerX" id="cHq-9e-a1Q"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dSa-4N-Mnc"/>
                         <color key="backgroundColor" red="0.1843137255" green="0.1450980392" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dSa-4N-Mnc" firstAttribute="bottom" secondItem="BSE-eb-tdb" secondAttribute="bottom" id="5vl-lv-6dH"/>
                             <constraint firstItem="BSE-eb-tdb" firstAttribute="leading" secondItem="dSa-4N-Mnc" secondAttribute="leading" id="D0M-1W-bxw"/>
-                            <constraint firstItem="TbE-zd-IkR" firstAttribute="centerX" secondItem="d3T-wH-ErD" secondAttribute="centerX" id="E2h-Uy-ULa"/>
                             <constraint firstItem="BSE-eb-tdb" firstAttribute="top" secondItem="dSa-4N-Mnc" secondAttribute="top" id="SBN-se-8em"/>
-                            <constraint firstItem="TbE-zd-IkR" firstAttribute="centerY" secondItem="d3T-wH-ErD" secondAttribute="centerY" id="Ylz-7l-Mj5"/>
-                            <constraint firstItem="TbE-zd-IkR" firstAttribute="height" secondItem="d3T-wH-ErD" secondAttribute="height" multiplier="1.01408" id="ZjR-ny-pIs"/>
-                            <constraint firstItem="TbE-zd-IkR" firstAttribute="width" secondItem="d3T-wH-ErD" secondAttribute="width" multiplier="1.02799" id="h52-aR-5Ed"/>
                             <constraint firstItem="dSa-4N-Mnc" firstAttribute="trailing" secondItem="BSE-eb-tdb" secondAttribute="trailing" id="nAg-HM-mPn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Titulo" largeTitleDisplayMode="never" id="1bC-p0-Kk2"/>
-                    <connections>
-                        <outlet property="loadingActivityIndicator" destination="PF7-RR-zO3" id="Ejv-Qy-J53"/>
-                        <outlet property="loadingView" destination="TbE-zd-IkR" id="6p2-vh-QKb"/>
-                        <outlet property="newsWebView" destination="BSE-eb-tdb" id="FmD-pu-5It"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWS-ca-PgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +104,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
