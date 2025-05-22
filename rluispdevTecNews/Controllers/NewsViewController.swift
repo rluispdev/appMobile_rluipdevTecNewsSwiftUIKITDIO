@@ -42,11 +42,30 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = news?.source.name
+        setupNavigationBarAppearance()
         setupLayout()
         setupLoadingView()
         configureView()
     }
 
+    
+    // MARK: - Configuração da Aparência da Barra de Navegação
+     private func setupNavigationBarAppearance() {
+         if let customPurpleColor = UIColor(named: "tecnewsPurple") {
+             let appearance = UINavigationBarAppearance()
+             appearance.configureWithOpaqueBackground()
+             appearance.backgroundColor = customPurpleColor
+             appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+             appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+             navigationController?.navigationBar.standardAppearance = appearance
+             navigationController?.navigationBar.scrollEdgeAppearance = appearance
+             navigationController?.navigationBar.tintColor = .white
+         }
+     }
+    
+    
+    
     // MARK: - Layout
     private func setupLayout() {
         view.addSubview(scrollView)
